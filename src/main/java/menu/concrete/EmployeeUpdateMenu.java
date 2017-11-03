@@ -138,6 +138,7 @@ public class EmployeeUpdateMenu extends Menu {
             BenefitPlat platinum = new BenefitPlat();
             this.selectedEmployee.setBenefitPackage(platinum);
         }
+        Console.print("Benefit package set to: " + selectedEmployee.getBenefitPackage().getName());
     }
 
     public void updateDepartment() {
@@ -155,8 +156,6 @@ public class EmployeeUpdateMenu extends Menu {
             case LOGISTICS:
                 this.selectedEmployee.setDepartment(Department.LOGISTICS);
                 break;
-            default:
-               Console.print("!!!ERROR!!!");
         }
     }
 
@@ -167,7 +166,7 @@ public class EmployeeUpdateMenu extends Menu {
   
     private String printIsSalary(){
         if(selectedEmployee.getIsSalary()){
-            return "Is currently Salary.";
+            return is currently salary.";
         }
         else{
             return "Is currently Hourly";

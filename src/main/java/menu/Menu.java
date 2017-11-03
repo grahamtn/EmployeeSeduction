@@ -5,6 +5,7 @@ import utilities.Console;
 
 public abstract class Menu {
     private Enum[] menuEnum;
+    boolean tryCatch = true;
 
     public Menu(Enum[] menuEnums) {
         this.menuEnum = menuEnums;
@@ -14,7 +15,7 @@ public abstract class Menu {
 
     public void display() {
         String userInput;
-        boolean tryCatch = true;
+
 
         do {
             try {
