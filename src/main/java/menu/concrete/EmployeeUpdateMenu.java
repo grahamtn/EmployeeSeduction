@@ -138,15 +138,20 @@ public class EmployeeUpdateMenu extends Menu {
             BenefitPlat platinum = new BenefitPlat();
             this.selectedEmployee.setBenefitPackage(platinum);
         }
+<<<<<<< HEAD
         Console.print("Benefit package set to: " + selectedEmployee.getBenefitPackage().getName());
+=======
+        else {
+            updateBenefits();
+        }
+>>>>>>> a0f86279bf7f5746a4d7551bf701b7b9116ffd74
     }
 
     public void updateDepartment() {
         Console.print("Employee's current department: " + selectedEmployee.getDepartment());
         String input = Console.getString("Enter new department (Management, Finance, Logistics): ");
-
-
-        switch (Department.valueOf(input)) {
+        
+        switch (Department.valueOf(input.toUpperCase())) {
             case MANAGEMENT:
                 this.selectedEmployee.setDepartment(Department.MANAGEMENT);
                 break;
